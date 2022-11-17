@@ -1,0 +1,50 @@
+@import '../mainConfig.scss';
+@import '../utils/colors.scss';
+
+.test-container{
+  background-color: white;
+  border-radius: 1rem;
+  padding:1rem 1.4rem;
+  transition: $main-transition;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  width:21rem;
+  &:hover {
+    box-shadow: #f32a8f2f 5px 5px, #f32a8f1e 10px 10px, #f32a8f02 15px 15px;
+  }
+  .quote{
+    margin:0;
+    line-height: 1;
+    line-height: 1;
+    padding: 0;
+    span{
+      font-size: 4rem;
+      color:$buttonPinkColor;
+      margin:0;
+      padding: 0;
+      line-height: 1;
+    }
+  }
+  .content{
+    color:$lightFontColor;
+    margin-top:.5rem;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+  .info{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap:.3rem;
+    margin-top:1.3rem;
+    .name{
+      color:$headingColor;
+      font-size: 1.2rem;
+      font-weight: bolder;
+    }
+    .description{
+      font-size:1.1rem;
+      color:$pinkColor;
+    }
+  }
+}
+

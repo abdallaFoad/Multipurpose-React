@@ -1,0 +1,80 @@
+@import "../mainConfig.scss";
+@import "../utils/colors.scss";
+
+.why-container {
+  padding: 3rem 0;
+  .container {
+    margin: 0 10%;
+    .head {
+      @extend %centering;
+      flex-direction: column;
+      p {
+        text-align: center;
+        width: 65%;
+        color: $lightFontColor;
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+    }
+    .content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      margin-top: 2rem;
+      .video {
+        background-image: url("../../assets//videoImage.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        @extend %centering;
+        min-height: 18rem;
+        border-radius: 1rem;
+        svg {
+          font-size: 6rem;
+          color: white;
+          cursor: pointer;
+        }
+      }
+      .info {
+        width: 90%;
+        margin-left: 2rem;
+        @extend %centering;
+        flex-direction: column;
+        ul {
+          li {
+            position: relative;
+            margin-bottom: 1.5rem;
+            padding-left: 3rem;
+            line-height: 1.2;
+            color: $lightFontColor;
+            &::before {
+              content: "";
+              position: absolute;
+              background-image: url("../../assets/check-circle.svg");
+              background-repeat: no-repeat;
+              width: 24px;
+              height: 24px;
+              left: 0;
+              top: -2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .why-container {
+    .container {
+      .head{
+        p{
+          font-size:1.1rem;
+          width:100%;
+        }
+      }
+      .content {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

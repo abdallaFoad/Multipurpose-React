@@ -1,0 +1,85 @@
+@import "../utils/colors.scss";
+@import "../mainConfig.scss";
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 0;
+  margin-top:1.5rem;
+  .col {
+    @extend %centering;
+    .collapsible-button {
+      display: none;
+    }
+  }
+  .nav {
+    display:flex;
+    .links {
+      ul {
+        @extend %centering;
+        gap: 1.5rem;
+        li {
+          &:hover a{
+            color:$pinkColor;
+          }
+          a {
+            color: $blueColor;
+            font-size:1.2rem;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width:768px){
+  .navbar.active{
+    .nav{
+      display:block;
+      position: relative;
+    }
+  }
+  .navbar{
+    flex-direction: column;
+    justify-content: flex-end;
+    .col{
+      display:flex;
+      align-items: center;
+      justify-content:space-between;
+      .collapsible-button{
+        display:block;
+        font-size: xx-large;
+      }
+    }
+    .nav{
+      display:none;
+      .links{
+        position: absolute;
+        right:0;
+        background-color: rgba(255, 255, 255, 0.89);
+        margin:1rem auto;
+        width:fit-content;
+        padding:1rem .2rem;
+        border-radius: .5rem;
+        border:.1rem solid #f50460;
+        z-index: 33;
+        ul{
+          z-index: 33;
+          flex-direction: column;
+          align-items: center;
+          li{
+            margin:.2rem 0;
+            :first-of-type{
+              margin-top:1rem;
+            }
+            a{
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

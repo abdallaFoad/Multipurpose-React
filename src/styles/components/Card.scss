@@ -1,0 +1,35 @@
+@import "../mainConfig.scss";
+@import "../utils/colors.scss";
+
+.card {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.2rem;
+  width: 14rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 10rem;
+  width: 15rem;
+  transition: $main-transition;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  div {
+    padding: 0.6rem;
+    border-radius: 0.2rem;
+    background-color: #f32a8f33;
+    margin-bottom: 1.2rem;
+    @extend %centering;
+    width: fit-content;
+    svg {
+      font-size: xx-large;
+      color: #f23a8f;
+    }
+  }
+  h2 {
+    color: rgb(18, 18, 88);
+    margin-top: 0.5rem;
+  }
+  &:hover {
+    box-shadow: #f32a8f2f 5px 5px, #f32a8f1e 10px 10px, #f32a8f02 15px 15px;
+  }
+}

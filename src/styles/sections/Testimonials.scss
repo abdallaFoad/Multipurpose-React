@@ -1,0 +1,47 @@
+@import '../mainConfig.scss';
+@import '../utils/colors.scss';
+
+.testimonials-container{
+  background-color: $bgOtherColor;
+  .container{
+    margin:0 10%;
+    padding:3rem 0;
+    .head{
+      @extend %centering;
+      flex-direction: column;
+      p{
+        text-align: center;
+        font-size:1.2rem;
+        color:$lightFontColor;
+      }
+    }
+    .testimonials{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:2rem;
+      margin-top:3rem;
+    }
+  }
+}
+@media (min-width:320px) and (max-width:768px) {
+  .testimonials-container{
+    .container{
+      .testimonials{
+        grid-template-columns: repeat(1, 1fr);
+        .test-container{
+          width:100%;
+        }
+      }
+    }
+  }
+}
+@media (min-width:769px) and (max-width:1024px) {
+  .testimonials-container{
+    .container{
+      .testimonials{
+        grid-template-columns: repeat(2, 1fr);
+        
+      }
+    }
+  }
+}

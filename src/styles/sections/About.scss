@@ -1,0 +1,51 @@
+@import "../mainConfig.scss";
+@import "../utils/colors.scss";
+
+.about-container {
+  background-color: $bgOtherColor;
+  .container {
+    margin: 0 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding:3rem 0;
+  }
+  .details {
+    p {
+      color:$lightFontColor;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      font-size: 1.2rem;
+    }
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .about-container {
+    .container {
+      grid-template-columns: repeat(1, 1fr);
+      .details {
+        .title{
+          h2{
+            font-size:1.5rem;
+          }
+        }
+        p {
+          font-size: 0.9rem;
+          line-height: 1.2;
+          
+        }
+      }
+      .cards{
+        grid-template-columns: repeat(1, 1fr);
+        .card{
+          width:100%;
+        }
+      }
+    }
+  }
+}
