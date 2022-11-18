@@ -1,6 +1,8 @@
-%centering{
-  display:flex;
+%centering {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
-$main-transition:.4s ease-in-out;
+$main-transition: 0.4s ease-in-out;
+$boxShadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+$boxShadowHover: #f32a8f2f 5px 5px, #f32a8f1e 10px 10px, #f32a8f02 15px 15px;

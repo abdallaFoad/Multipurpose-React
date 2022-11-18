@@ -1,0 +1,34 @@
+@import "../mainConfig.scss";
+@import "../utils/colors.scss";
+
+.blog-container {
+  transition: $main-transition;
+  box-shadow: $boxShadow;
+  border-radius: .4rem;
+  &:hover {
+    box-shadow: $boxShadowHover;
+  }
+  .img {
+    width: 100%;
+    height: 12rem;
+    @extend %centering;
+    img {
+      border-radius: .4rem;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .content {
+    padding:.6rem;
+    .title {
+      font-size: 1.2rem;
+      color: $headingColor;
+      margin-top: 1rem;
+    }
+    .description{
+      font-size:1.1rem;
+      color:$pinkColor;
+      margin-bottom:1.1rem;
+    }
+  }
+}

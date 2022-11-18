@@ -12,7 +12,7 @@
   height: 10rem;
   width: 15rem;
   transition: $main-transition;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  box-shadow: $boxShadow;
   div {
     padding: 0.6rem;
     border-radius: 0.2rem;
@@ -30,6 +30,6 @@
     margin-top: 0.5rem;
   }
   &:hover {
-    box-shadow: #f32a8f2f 5px 5px, #f32a8f1e 10px 10px, #f32a8f02 15px 15px;
+    box-shadow: $boxShadowHover;
   }
 }

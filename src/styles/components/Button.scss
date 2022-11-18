@@ -33,6 +33,17 @@ button{
     border:1px solid $pinkColor;
   }
 }
+.white{
+  background-color: white;
+  color:$pinkColor;
+  border:1px solid $pinkColor;
+  font-size:1rem;
+  &:hover{
+    background-color: $pinkColor;
+    color:white;
+    border:1px solid $pinkColor;
+  }
+}
 
 @media (min-width:320px) and (max-width:768px){
   button{

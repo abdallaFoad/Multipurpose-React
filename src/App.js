@@ -1,5 +1,6 @@
 import './App.css';
 import About from './sections/About';
+import Blogs from './sections/Blogs';
 import Starter from './sections/Starter';
 import Testimonials from './sections/Testimonials';
 import Why from './sections/Why';
@@ -11,6 +12,7 @@ function App() {
       <About />
       <Why />
       <Testimonials />
+      <Blogs />
     </div>
   );
 }
