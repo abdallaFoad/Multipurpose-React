@@ -1,18 +1,11 @@
-import './App.css';
-import About from './sections/About';
-import Blogs from './sections/Blogs';
-import Starter from './sections/Starter';
-import Testimonials from './sections/Testimonials';
-import Why from './sections/Why';
+import "./App.css";
+
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
-      <Starter />
-      <About />
-      <Why />
-      <Testimonials />
-      <Blogs />
+      <Home />
     </div>
   );
 }

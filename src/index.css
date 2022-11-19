@@ -4,8 +4,20 @@
   padding:0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Raleway', sans-serif;
+}
+::-webkit-scrollbar{
+  width:9px;
+}
+::-webkit-scrollbar-track{
+  background-color: white;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(18, 18, 88);
 }
 ul{list-style: none;}
 a{text-decoration:none;}

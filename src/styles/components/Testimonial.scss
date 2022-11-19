@@ -4,16 +4,16 @@
 .test-container{
   background-color: white;
   border-radius: 1rem;
-  padding:1rem 1.4rem;
+  padding:1rem;
   transition: $main-transition;
   box-shadow: $boxShadow;
-  width:21rem;
+  margin:0 auto;
+  width:100%;
   &:hover {
     box-shadow:$boxShadowHover;
   }
   .quote{
     margin:0;
-    line-height: 1;
     line-height: 1;
     padding: 0;
     span{
@@ -44,6 +44,21 @@
     .description{
       font-size:1.1rem;
       color:$pinkColor;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width:768px) {
+  .test-container{
+    .quote{
+      span{
+        font-size: 2rem;
+      }
+    }
+    .content{
+      font-size:1rem;
+      font-weight: normal;
+      line-height: normal;
     }
   }
 }

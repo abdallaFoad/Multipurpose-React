@@ -1,15 +1,25 @@
-@import '../utils/colors.scss';
+@import "../utils/colors.scss";
+@import '../mainConfig.scss';
 
-.brand{
+.brand {
   cursor: pointer;
-  span{
+  margin-top: 0;
+  @extend %centering;
+  .span {
+    padding: 0.6rem 1rem;
     text-transform: uppercase;
-    border:.1rem solid #f50460;
-    font-size:xx-large;
+    border: 0.1rem solid #f50460;
+    font-size: xx-large;
     font-weight: 700;
-    padding:.6rem 1rem;
-    border-radius: .3rem;
-    letter-spacing: .2rem;
-    color:$blueColor
+    border-radius: 0.3rem;
+    letter-spacing: 0.2rem;
+    color: $blueColor;
+  }
+}
+.brand {
+  .inFooter {
+    background-color: transparent;
+    color: white;
+    border: 0.1rem solid white;
   }
 }

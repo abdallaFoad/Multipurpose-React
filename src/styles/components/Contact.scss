@@ -1,0 +1,8 @@
+@import '../mainConfig.scss';
+@import '../utils/colors.scss';
+
+.contact{
+  span,p{
+    color:$fontFooter;
+  }
+}

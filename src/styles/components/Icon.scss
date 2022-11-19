@@ -1,0 +1,33 @@
+@import "../mainConfig.scss";
+@import "../utils//colors.scss";
+
+.icon {
+  background-color: #2c2c31;
+  width: 2.5rem;
+  height: 2.5rem;
+  @extend %centering;
+  transition: $main-transition;
+  &:hover {
+    background-color: $bgOtherColor;
+    svg {
+      color: #2c2c31;
+    }
+    svg.instagram{
+      color:#E4405F;
+    }
+    svg.twitter{
+      color:#1DA1F2;
+    }
+    svg.facebook{
+      color:#1877F2;
+    }
+    svg.linkedin{
+      color:#0A66C2;
+    }
+  }
+  svg {
+    color: $bgOtherColor;
+    padding: 0.4rem;
+    font-size: 2.5rem;
+  }
+}

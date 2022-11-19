@@ -1,0 +1,19 @@
+@import '../utils/colors.scss';
+@import '../mainConfig.scss';
+
+.arrowTop{
+  width:40px;
+  height:40px;
+  position:fixed;
+  right:1rem;
+  bottom: 1rem;
+  background-color: $headingColor;
+  border-radius: 50%;
+  @extend %centering;
+  cursor: pointer;
+  z-index: 333;
+  svg{
+    color:white;
+    font-size: 1.5rem;
+  }
+}

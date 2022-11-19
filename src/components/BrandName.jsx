@@ -3,12 +3,12 @@ import '../styles/components/BrandName.scss';
 
 
 
-const BrandName = () => {
+const BrandName = ({inFooter = false}) => {
   return (
     <div className='brand'>
-      <span>sryo</span>
+      <span className={`span ${inFooter === true ? "inFooter" : ""}`}>cryo</span>
     </div>
-  )
+  );
 }
 
-export default BrandName
+export default BrandName;
