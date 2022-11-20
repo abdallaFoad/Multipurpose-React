@@ -3,6 +3,7 @@
 
 .about-container {
   background-color: $bgOtherColor;
+  overflow: hidden;
   .container {
     margin: 0 10%;
     display: grid;

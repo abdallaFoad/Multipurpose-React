@@ -6,10 +6,12 @@ import ScrollTop from "../sections/ScrollTop";
 import Starter from "../sections/Starter";
 import Testimonials from "../sections/Testimonials";
 import Why from "../sections/Why";
+import { motion } from 'framer-motion';
+
 
 const Home = () => {
   return (
-    <div>
+    <motion.div initial='hidden' animate='show'>
       <Starter />
       <About />
       <Why />
@@ -17,7 +19,7 @@ const Home = () => {
       <Blogs />
       <Footer />
       <ScrollTop />
-    </div>
+    </motion.div>
   );
 };
 

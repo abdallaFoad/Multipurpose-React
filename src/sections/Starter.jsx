@@ -5,13 +5,22 @@ import "../styles/sections/Starter.scss";
 import { GoPlay } from "react-icons/go";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import Navbar from "../components/Navbar";
+import { motion } from "framer-motion";
+import { headerAnimate, imageAnimate } from "../Animation";
+import { useScroll } from "../components/useScroll";
 
 const Starter = () => {
+  const [element, controls] = useScroll();
   return (
-    <div className="main-container">
+    <div className="main-container" ref={element}>
       <Navbar />
       <div className="container">
-        <div className="content">
+        <motion.div
+          className="content"
+          variants={headerAnimate}
+          animate={controls}
+          transition={{ delay: 0.2, type: "tween" }}
+        >
           <h1>
             We Provide Solutions to Help You to Build or Grow Your Business!
           </h1>
@@ -28,10 +37,15 @@ const Starter = () => {
               color="pink"
             />
           </div>
-        </div>
-        <div className="image">
+        </motion.div>
+        <motion.div
+          className="image"
+          variants={imageAnimate}
+          animate={controls}
+          transition={{type: "tween" }}
+        >
           <img src={imgWork} alt="work" />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

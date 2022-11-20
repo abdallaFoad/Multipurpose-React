@@ -2,6 +2,7 @@
 @import '../utils/colors.scss';
 
 .testimonials-container{
+  overflow: hidden;
   background-color: $bgOtherColor;
   .container{
     margin:0 10%;
