@@ -7,18 +7,28 @@ import { RiFacebookFill } from "react-icons/ri";
 import { AiFillInstagram } from "react-icons/ai";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
-import {NavLink} from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import "../styles/sections/Footer.scss";
 import BrandName from "../components/BrandName";
 import Contact from "../components/Contact";
 import Icon from "../components/Icon";
+import { motion } from "framer-motion";
+import { fromDown, fromUp, videoWhyAnimate } from "../Animation";
+import { useScroll } from "../components/useScroll";
 
 const Footer = () => {
+  const [element, controls] = useScroll();
+
   return (
-    <div className="footer-container">
+    <div className="footer-container" ref={element}>
       <div className="container">
         <div className="top">
-          <div className="newsLetter">
+          <motion.div
+            className="newsLetter"
+            variants={fromUp}
+            animate={controls}
+            transition={{ duration: 0.5 }}
+          >
             <BrandName inFooter={true} />
             <p>
               Join our newsletter to get updated with our Offers & Discounts.
@@ -36,8 +46,13 @@ const Footer = () => {
                 <RiSendPlaneFill />
               </button>
             </div>
-          </div>
-          <div className="quick-links">
+          </motion.div>
+          <motion.div
+            className="quick-links"
+            variants={fromDown}
+            animate={controls}
+            transition={{ duration: 0.5 }}
+          >
             <h4>Quick Links</h4>
             <ul>
               <li>
@@ -65,8 +80,13 @@ const Footer = () => {
                 <a href="#">Privacy Policy</a>
               </li>
             </ul>
-          </div>
-          <div className="industries">
+          </motion.div>
+          <motion.div
+            className="industries"
+            variants={fromUp}
+            animate={controls}
+            transition={{ duration: 0.5 }}
+          >
             <h4>Industries</h4>
             <ul>
               <li>
@@ -91,8 +111,13 @@ const Footer = () => {
                 <a href="#">IOS App Development</a>
               </li>
             </ul>
-          </div>
-          <div className="touch">
+          </motion.div>
+          <motion.div
+            className="touch"
+            variants={fromDown}
+            animate={controls}
+            transition={{ duration: 0.5 }}
+          >
             <h4>Get In Touch</h4>
             <div className="all-info">
               <div className="info">
@@ -118,9 +143,14 @@ const Footer = () => {
                 <Contact name="Location" address="Egypt" />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-        <div className="bottom">
+        <motion.div
+          className="bottom"
+          variants={videoWhyAnimate}
+          animate={controls}
+          transition={{ duration: 0.5 }}
+        >
           <div className="copyRight">
             <p>Copyright &copy; 2022. All Rights Reserved.</p>
           </div>
@@ -154,11 +184,10 @@ const Footer = () => {
               <Icon icon={<AiOutlineTwitter className="twitter" />} />
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
 };
 
 export default Footer;
-

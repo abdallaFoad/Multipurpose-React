@@ -38,3 +38,11 @@ export const contentWhyAnimate = {
   show: { x: 0, opacity: 1 },
 };
 
+export const fromUp = {
+  hidden: { y: 200, opacity: 0 },
+  show:{y:0, opacity:1}
+}
+export const fromDown = {
+  hidden: { y: -200, opacity: 0 },
+  show:{y:0, opacity:1}
+}
