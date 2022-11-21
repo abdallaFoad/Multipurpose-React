@@ -24,9 +24,12 @@ const Navbar = () => {
         <BrandName />
         <div className="collapsible-button">
           {!toggleNav ? (
-            <GiHamburgerMenu onClick={navbarToggle} />
+            <GiHamburgerMenu
+              onClick={navbarToggle}
+              style={{ cursor: "pointer" }}
+            />
           ) : (
-            <MdClose onClick={navbarToggle} />
+            <MdClose onClick={navbarToggle} style={{ cursor: "pointer" }} />
           )}
         </div>
       </div>

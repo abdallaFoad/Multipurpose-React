@@ -1,0 +1,7 @@
+@import '../mainConfig.scss';
+@import '../utils/colors.scss';
+
+.map-container{
+  @extend %centering;
+  margin:3rem 0;
+}

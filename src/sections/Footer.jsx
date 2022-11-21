@@ -121,17 +121,17 @@ const Footer = () => {
             <h4>Get In Touch</h4>
             <div className="all-info">
               <div className="info">
-                <a
-                  href="https://myaccount.google.com/?hl=en&utm_source=OGB&utm_medium=act"
+                <NavLink
+                  to="/map"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Icon icon={<HiOutlineMail />} />
-                </a>
+                </NavLink>
                 <Contact name="Email" address="foadabdalla314@gmail.com" />
               </div>
               <div className="info">
-                <a href="#">
+                <a href="#phone">
                   <Icon icon={<AiFillPhone />} />
                 </a>
                 <Contact name="Phone" address="01144704339" />
