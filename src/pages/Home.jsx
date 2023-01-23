@@ -9,7 +9,6 @@ import Why from "../sections/Why";
 import { motion } from "framer-motion";
 import { Route, Routes } from "react-router-dom";
 import Map from "../components/Map";
-import Navbar from "../components/Navbar";
 
 const Home = () => {
   return (
